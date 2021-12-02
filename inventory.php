@@ -21,6 +21,21 @@
 
         // create a form, so the user can select an item to buy
         inventory_form();
-            ?>
+
+        if (isset($_POST['IID']))
+        {
+            $item_id = $_POST['IID'];
+
+            // prepare sql query to buy the item that the user selected
+            $prepared = $pdo->prepare('SELECT QTY, COST FROM Instock WHERE IID = ?');
+
+            // execute sql query
+            $prepared->execute(array($item_id));
+
+            $rows = $prepared->fetchall(PDO::FETCH_ASSOC);
+
+            echo $rows;
+        }
+        ?>
     </body>
 </html>
