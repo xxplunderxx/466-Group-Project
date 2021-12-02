@@ -30,7 +30,7 @@
 				echo "OR";
 			echo "</th>";
 			echo "<th>";
-				echo '<a href="home.html">';
+				echo '<a href="Checkout.php">';
 					echo "<h2>";
 						echo "Checkout";
 					echo "</h2>";
