@@ -15,7 +15,12 @@
         print("LIST OF ITEMS IN STOCK:\n");
         $result = $pdo->query("SELECT * FROM Instock;");
         $rows = $result->fetchAll(PDO::FETCH_ASSOC);
+
+        // draw the inventory table
         draw_table($rows);
+
+        // create a form, so the user can select an item to buy
+        inventory_form();
             ?>
     </body>
 </html>

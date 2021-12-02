@@ -30,4 +30,17 @@ function draw_table($rows)
         echo "</table>";
     }
 }
+
+function inventory_form()
+{
+    // *** inventory selection form *** //
+    echo '<form action="" method="POST">';
+    
+	echo "<h3>"."Select Item (Enter Item IID)"."</h3>";
+		echo '<input type="text" name="IID" value="blank"/> Item IID';
+		
+	echo '<br/><input type="submit" value="Submit"/>';
+	echo "</form>";
+}
+
 ?>
