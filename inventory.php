@@ -11,7 +11,7 @@
         }
          catch(PDOexception $e){
             echo "Connection to database failed: " . $e->getMessage();
-        }
+	 }
         print("LIST OF ITEMS IN STOCK:\n");
         $result = $pdo->query("SELECT * FROM Instock;");
         $rows = $result->fetchAll(PDO::FETCH_ASSOC);
@@ -37,8 +37,10 @@
             $rows = $prepared->fetchall(PDO::FETCH_ASSOC);
 
             print_r($rows);
-            echo "You ordered".$QTY."Items";
-        }
-        ?>
+	    echo "You ordered ".$QTY." Items";
+
+	}
+	//NEED TO ADD A HYPER LINK THAT LETS USER CHOOSE TO VIEW CART OT CONTINUE SHOPPING
+?>
     </body>
 </html>
