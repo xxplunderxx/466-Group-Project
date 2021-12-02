@@ -4,7 +4,7 @@
 	include("secret.php");
 	include("functions.php");
         try{
-            $dsn = "mysql:host=courses;dbname=.$username";
+            $dsn = "mysql:host=courses;dbname=".$username;
             $pdo = new PDO($dsn, $username, $password);
         }
         catch(PDOexception $e){
