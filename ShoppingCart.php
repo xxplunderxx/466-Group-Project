@@ -13,7 +13,10 @@
         print("Your Shopping Cart:\n");
         $result = $pdo->query("SELECT * FROM Cart;");
         $rows = $result->fetchAll(PDO::FETCH_ASSOC);
-        draw_table($rows)
+        draw_table($rows);
+	echo "<br/>";
+	print("Would you like to continue shopping or checkout? ");
+	echo "<br/>";
             ?>
     </body>
 </html>
