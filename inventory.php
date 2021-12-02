@@ -40,7 +40,18 @@
 	    echo "You ordered ".$QTY." Items";
 
 	}
-	//NEED TO ADD A HYPER LINK THAT LETS USER CHOOSE TO VIEW CART OT CONTINUE SHOPPING
+	// link to shoppping cart
+	echo "<table cellpadding=30>";
+		echo "<tr>";
+			echo "<th>";
+				echo '<a href="ShoppingCart.php">';
+					echo "<h2>";
+						echo "Shopping Cart";
+					echo "</h2>";
+				echo "</a>";
+			echo "</th>";
+		echo "</tr>";
+	echo "</table>";
 ?>
     </body>
 </html>
