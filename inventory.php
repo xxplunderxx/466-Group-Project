@@ -6,7 +6,7 @@
         // username
         // password
         try{
-            $dsn = "mysql:host=courses;dbname=z1854210";
+            $dsn = "mysql:host=courses;dbname=".$username;
             $pdo = new PDO($dsn, $username, $password);
         }
          catch(PDOexception $e){
@@ -24,17 +24,20 @@
 
         if (isset($_POST['IID']))
         {
+            // decalare varaiables
             $item_id = $_POST['IID'];
+            $QTY = $_POST['QTY'];
 
             // prepare sql query to buy the item that the user selected
-            $prepared = $pdo->prepare('SELECT QTY, COST FROM Instock WHERE IID = ?');
+            $prepared = $pdo->prepare('SELECT Cost,_Name FROM Instock WHERE IID = ?');
 
             // execute sql query
             $prepared->execute(array($item_id));
 
             $rows = $prepared->fetchall(PDO::FETCH_ASSOC);
 
-            echo $rows;
+            print_r($rows);
+            echo "You ordered".$QTY."Items";
         }
         ?>
     </body>
