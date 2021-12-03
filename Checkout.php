@@ -42,7 +42,27 @@
 	    $prepared2->execute(array($name,$card,$addy));
 	    echo "<meta http-equiv='refresh' content='0'>";
 	}
-		
+	// completly submit
+	echo "<br/>";
+    	echo '<form method="POST">';
+
+    	echo "<h3>"."Complete Checkout"."</h3>";
+        	echo '<input type="radio" name="Done"/> Yes ';    // Name
+
+        	echo '<br/><input type="submit" value="Submit"/>';
+	echo "</form>";
+	 if(isset($_POST['Done']))
+        {
+              
+	    $prepared2 = $pdo->prepare('INSERT INTO Ord(TOTAL) VALUE(?);');
+	    $prepared2->execute(array($TOTAL));
+	    $prepared2 = $pdo->prepare('INSERT INTO Fullfilment(TOTAL) VALUE(?);');
+	    $prepared2->execute(array($TOTAL));
+
+	    echo "<meta http-equiv='refresh' content='0'>";
+	    //reset the shopping cart for the next customer
+            $result = $pdo->query("DELETE FROM Cart WHERE TOTAL > 0.00");
+	}
 	?>
     </body>
 </html>
