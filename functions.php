@@ -37,7 +37,7 @@ function inventory_form()
     echo '<form action="" method="POST">';
     
 	echo "<h3>"."Select Item and purchase quantity"."</h3>";
-		echo '<input type="text" name="IID"/> Item IID';    // item select
+		echo '<input type="text" name="IID"/> Item IID ';    // item select
         echo '<input tupe="text" name="QTY"/> QTY';         // quantity input
 		
 	echo '<br/><input type="submit" value="Submit"/>';
