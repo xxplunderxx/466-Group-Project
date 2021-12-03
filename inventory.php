@@ -41,7 +41,7 @@
 	    echo "<br/>";
 	    echo "Item Name: ". $item_name . " ,  Item Cost: ". $item_cost;
 	    // insert new part
-            $prepared2 = $pdo->prepare('INSERT INTO Cart(TOTAL,_NAME,COUNT) VALUE(?,?,?)');
+            $prepared2 = $pdo->prepare('INSERT INTO Cart(TOTAL,_NAME,_COUNT) VALUE(?,?,?)');
 
 	    // execute sql query
             $prepared2->execute(array($item_cost,$item_name,$QTY));
