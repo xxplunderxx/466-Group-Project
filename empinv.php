@@ -30,8 +30,6 @@
 
         // draw the inventory table
         draw_table($Outrows);
-        
-	}
 	echo "<table cellpadding=30>";
 		echo "<tr>";
 			echo "<th>";
