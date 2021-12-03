@@ -204,4 +204,17 @@ function checkout_form()
     echo "</form>";
 }
 
+function F_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."Change Order Staus"."</h3>";
+        echo '<input type="text" name="Num"/> NUMBER ';    // item select
+        echo '<input tupe="text" name="Stat"/> STATUS (P or S) ';         // status input
+
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
+
 ?>
