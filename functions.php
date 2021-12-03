@@ -63,4 +63,19 @@ function cart_form()
     echo '<br/><input type="submit" value="Submit"/>';
     echo "</form>";
 }
+function checkout_form()
+{
+    echo '<form method="POST">';
+        
+    echo "<h3>"."Insert Billing Information"."</h3>";
+        echo '<input type="text" name="_NAME"/> NAME ';    // Name
+        echo '<input type="text" name="ADDRESS"/> ADDRESS ';    // Shipping addess
+        echo '<input tupe="text" name="CC"/> CC ';         // Billing information credit card
+
+        echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+
+
+}
+
 ?>
