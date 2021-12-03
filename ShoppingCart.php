@@ -26,11 +26,11 @@
 	    $COUNT = $_POST['COUNT'];
            	     
 	    // insert new part
-            $prepared2 = $pdo->prepare('UPDATE Cart SET COUNT = ? WHERE ORDERNUM=?');
+            $prepared2 = $pdo->prepare('UPDATE Cart SET _COUNT = ? WHERE ORDERNUM=?');
 
 	    // execute sql query
 	    $prepared2->execute(array($COUNT,$item_id1));
-	    //echo "<meta http-equiv='refresh' content='0'>";
+	    echo "<meta http-equiv='refresh' content='0'>";
 	    
 
 	}
@@ -43,7 +43,7 @@
 
 	    // execute sql query
 	    $prepared2->execute(array($item_id2));
-	    //echo "<meta http-equiv='refresh' content='0'>";
+	    echo "<meta http-equiv='refresh' content='0'>";
 	}
 
 	echo "<br/>";
