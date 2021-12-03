@@ -134,13 +134,13 @@ INSERT INTO Items (`IID`,`_NAME`,`COST`) VALUES
   ('P020','Sugar',2.39),
   ('P021','Salmon',31.94);
 
-INSERT INTO User (`UID`,`_NAME`,`CC`,`ADDRESS`) VALUES
-  ('C0001','John Smith','4382688703331714','815 Cherry st'),
-  ('C0002','Marcus Adebayo','0824272199710931','643 Washington dr'),
-  ('C0003','Gabby Garcia','5771034244547482','99k876 Huskie dr'),
-  ('C0004','Parker Johnson','3136744323772640','1108 Wood blvd'),
-  ('C0005','Jenny Chen','2416030230312982','268w21 Neal ct'),
-  ('C0006','Harper Kowalska ','3136744323772640','1108 Wood blvd');
+INSERT INTO User (`_NAME`,`CC`,`ADDRESS`) VALUES
+  ('John Smith','4382688703331714','815 Cherry st'),
+  ('Marcus Adebayo','0824272199710931','643 Washington dr'),
+  ('Gabby Garcia','5771034244547482','99k876 Huskie dr'),
+  ('Parker Johnson','3136744323772640','1108 Wood blvd'),
+  ('Jenny Chen','2416030230312982','268w21 Neal ct'),
+  ('Harper Kowalska ','3136744323772640','1108 Wood blvd');
 
 INSERT INTO Ord (`ORDERNUM`,`TOTAL`) VALUES
   ('00001', '9.45'),
