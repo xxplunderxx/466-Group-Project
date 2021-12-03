@@ -43,5 +43,24 @@ function inventory_form()
 	echo '<br/><input type="submit" value="Submit"/>';
 	echo "</form>";
 }
+function cart_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
 
+    echo "<h3>"."Update item amount"."</h3>";
+        echo '<input type="text" name="ORDERNUM1"/> ORDERNUM ';    // item select
+        echo '<input tupe="text" name="COUNT"/> QTY ';         // quantity input
+
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+	////////
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."Delete Item in Cart"."</h3>";
+        echo '<input type="text" name="ORDERNUM2"/> ORDERNUM ';    // item select
+
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
 ?>
