@@ -65,7 +65,7 @@
 
         // insert into fullfilment
 	    $prepared2 = $pdo->prepare('INSERT INTO Fullfilment(_Status,QTY) VALUE(?,?,?);';
-	    $prepared2->execute(array("Pending",$TOTAL));
+	    $prepared2->execute(array('P',$TOTAL));
 
 	    echo "<meta http-equiv='refresh' content='0'>";
 	    //reset the shopping cart for the next customer
