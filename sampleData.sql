@@ -109,28 +109,28 @@ CREATE TABLE IF NOT EXISTS View (
   PRIMARY KEY (`ID2`,`NUMBER`)
 );
 
-INSERT INTO Items (`IID`,`QTY`,`_NAME`,`COST`) VALUES
-  ('P001',1000,'Apple Sauce',0.99),
-  ('P002',70,'Ribeye Steak',55.68),
-  ('P003',10,'Cereal',9.99),
-  ('P004',35,'Milk',1.89),
-  ('P005',40,'Eggs',2.35),
-  ('P006',15,'Jelly',3.98),
-  ('P007',65,'Bread',2.75),
-  ('P008',10,'Pretzels',8.76),
-  ('P009',23,'Peanut Butter',4.19),
-  ('P010',50,'Chicken',3.99),
-  ('P011',10,'Olive Oil',9.99),
-  ('P012',100,'Salt',0.59),
-  ('P013',82,'Hot Sauce',12.41),
-  ('P014',16,'Rice',25.99),
-  ('P015',10,'Potato Chips',8.75),
-  ('P016',200,'Pepsi',4.98),
-  ('P017',10,'Butter',1.15),
-  ('P018',60,'Cheese',6.59),
-  ('P019',80,'Honey',12.97),
-  ('P020',10,'Sugar',2.39),
-  ('P021',25,'Salmon',31.94);
+INSERT INTO Items (`IID`,`_NAME`,`COST`) VALUES
+  ('P001','Apple Sauce',0.99),
+  ('P002','Ribeye Steak',55.68),
+  ('P003','Cereal',9.99),
+  ('P004','Milk',1.89),
+  ('P005','Eggs',2.35),
+  ('P006','Jelly',3.98),
+  ('P007','Bread',2.75),
+  ('P008','Pretzels',8.76),
+  ('P009','Peanut Butter',4.19),
+  ('P010','Chicken',3.99),
+  ('P011','Olive Oil',9.99),
+  ('P012','Salt',0.59),
+  ('P013','Hot Sauce',12.41),
+  ('P014','Rice',25.99),
+  ('P015','Potato Chips',8.75),
+  ('P016','Pepsi',4.98),
+  ('P017','Butter',1.15),
+  ('P018','Cheese',6.59),
+  ('P019','Honey',12.97),
+  ('P020','Sugar',2.39),
+  ('P021','Salmon',31.94);
 
 INSERT INTO User (`UID`,`_NAME`,`CC`,`ADDRESS`) VALUES
   ('C0001','John Smith','4382688703331714','815 Cherry st'),
