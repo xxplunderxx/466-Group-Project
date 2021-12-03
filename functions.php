@@ -86,6 +86,101 @@ function cart_form()
     echo '<br/><input type="submit" value="Submit"/>';
     echo "</form>";
 }
+function empadditem_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."Add to item list"."</h3>";
+        echo '<input type="text" name="IID1"/> IID ';    // item select
+        echo '<input tupe="text" name="item_name1"/> ITEM NAME ';         // quantity input
+	echo '<input tupe="text" name="item_cost1"/> COST ';         // quantity input
+
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
+function empdeleteitem_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."DELETE ITEM FROM Items"."</h3>";
+        echo '<input type="text" name="IID2"/> IID ';    // item select
+   
+
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
+function empaddinstock_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."ADD TO Instock"."</h3>";
+        echo '<input type="text" name="IID3"/> IID ';    // item select
+	echo '<input type="text" name="QTY3"/> QTY ';    // item select
+	echo '<input type="text" name="NAME3"/> Item Name ';    // item select
+	echo '<input type="text" name="COST3"/> Cost ';    // item select
+	
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
+function empdeleteinstock_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."DELETE ITEM FROM Instock"."</h3>";
+        echo '<input type="text" name="IID4"/> IID ';    // item select
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
+function empupdateinstock_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."UPDATE Instock QTY"."</h3>";
+        echo '<input type="text" name="IID5"/> IID ';    // item select
+	echo '<input type="text" name="QTY5"/> QTY ';    // item select
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
+function empaddoutstock_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."ADD TO Outstock"."</h3>";
+        echo '<input type="text" name="IID6"/> IID ';    // item select
+	echo '<input type="text" name="QTY6"/> QTY ';    // item select
+	echo '<input type="text" name="NAME6"/> Item Name ';    // item select
+	echo '<input type="text" name="COST6"/> Cost ';    // item select
+	echo '<input type="text" name="LOC6"/> Location ';    // item select
+	
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
+function empdeleteoutstock_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
+    echo "<h3>"."DELETE ITEM FROM Outstock"."</h3>";
+        echo '<input type="text" name="IID7"/> IID ';    // item select
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
+function empupdateoutstock_form()
+{
+    //  inventory selection form  //
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."UPDATE Outstock QTY"."</h3>";
+        echo '<input type="text" name="IID8"/> IID ';    // item select
+	echo '<input type="text" name="QTY8"/> QTY ';    // item select
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+}
 function checkout_form()
 {
     echo '<form method="POST">';
