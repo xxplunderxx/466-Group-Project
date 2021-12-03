@@ -21,17 +21,24 @@
 	}
 
         echo "<h1>";
-        echo "CHECKOUT TOTAL: ".$TOTAL;
-        echo "</h1>";
-        checkout_form();
+	echo "CHECKOUT:";
+	echo "</h1>";
+	$result = $pdo->query("SELECT _NAME,_COUNT,TOTAL FROM Cart;");
+	$rows = $result->fetchAll(PDO::FETCH_ASSOC);
+	echo "<h3>";
+	echo "Your Cart:";
+	echo "</h3>";
+	draw_table_no_header($rows);
+	echo "<h3>";
+	echo "Cart Total: $" . $TOTAL;
+	checkout_form();
         if(isset($_POST['_NAME']))
         {
             $name = $_POST['_NAME'];
 	    $addy = $_POST['ADDRESS'];
 	    $card = $_POST['CC'];
-           	     
+            //working insert into User table	     
 	    $prepared2 = $pdo->prepare('INSERT INTO User(_NAME,CC,ADDRESS) VALUE(?,?,?);');
-
 	    $prepared2->execute(array($name,$card,$addy));
 	    echo "<meta http-equiv='refresh' content='0'>";
 	}
@@ -39,3 +46,4 @@
 	?>
     </body>
 </html>
+
