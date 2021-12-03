@@ -12,12 +12,12 @@
          catch(PDOexception $e){
             echo "Connection to database failed: " . $e->getMessage();
 	 }
-        print("LIST OF ITEMS IN STOCK:\n");
+
+        print("LIST OF ITEMS ON SHELVES:\n");
         $result = $pdo->query("SELECT * FROM Instock;");
         $rows = $result->fetchAll(PDO::FETCH_ASSOC);
-
         // draw the inventory table
-        draw_table($rows);
+	draw_table($rows);
 
         // create a form, so the user can select an item to buy
         inventory_form();
@@ -25,19 +25,27 @@
         if (isset($_POST['IID']))
         {
             // decalare varaiables
-            $item_id = $_POST['IID'];
-            $QTY = $_POST['QTY'];
-
+	    $item_id = $_POST['IID'];
+	    $QTY = $_POST['QTY'];
+	    
             // prepare sql query to buy the item that the user selected
             $prepared = $pdo->prepare('SELECT Cost,_Name FROM Instock WHERE IID = ?');
 
             // execute sql query
-            $prepared->execute(array($item_id));
-
-            $rows = $prepared->fetchall(PDO::FETCH_ASSOC);
-
-            print_r($rows);
+	    $prepared->execute(array($item_id));
+            $rows = $prepared->fetch();
+	    // get name and cost
+	    $item_cost = $rows[0];
+	    $item_name = $rows[1];    
 	    echo "You ordered ".$QTY." Items";
+	    echo "<br/>";
+	    echo "Item Name: ". $item_name . " ,  Item Cost: ". $item_cost;
+	    // insert new part
+            $prepared2 = $pdo->prepare('INSERT INTO Cart(TOTAL,_NAME,COUNT) VALUE(?,?,?)');
+
+	    // execute sql query
+            $prepared2->execute(array($item_cost,$item_name,$QTY));
+	    
 
 	}
 	// link to shoppping cart
