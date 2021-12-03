@@ -99,6 +99,14 @@ function checkout_form()
     echo "</form>";
 
 
+    // completly submit
+    echo '<form method="POST">';
+        
+    echo "<h3>"."Complete Checkout"."</h3>";
+        echo '<input type="radio" name="Done"/> Yes ';    // Name
+
+        echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
 }
 
 ?>
