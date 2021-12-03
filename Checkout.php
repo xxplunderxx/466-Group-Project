@@ -47,16 +47,6 @@
         echo "<meta http-equiv='refresh' content='0'>";
     }
 
-	// completly submit
-	echo "<br/>";
-    	echo '<form method="POST">';
-
-    	echo "<h3>"."Complete Checkout"."</h3>";
-        	echo '<input type="radio" name="Done"/> Yes ';    // Name
-
-        	echo '<br/><input type="submit" value="Submit"/>';
-	echo "</form>";
-
 	 if(isset($_POST['Done']))
         {
         // insert into order
