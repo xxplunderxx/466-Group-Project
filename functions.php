@@ -30,6 +30,29 @@ function draw_table($rows)
         echo "</table>";
     }
 }
+function draw_table_no_header($rows)
+{
+    if(empty($rows))
+    {
+        echo "<p>No Results found</p>";
+    }
+
+    else
+    {
+        echo "<table border=2 cellspacing=2>";
+        echo "<tr>";
+        foreach($rows as $row )
+        {
+            echo "<tr>";
+            foreach($row as $key => $item)
+                {
+                    echo "<td>$item</td>";
+                }
+            echo "</tr>";
+        }
+        echo "</table>";
+    }
+}
 
 function inventory_form()
 {
