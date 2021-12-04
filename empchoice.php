@@ -39,6 +39,16 @@
 					echo "</h2>";
 				echo "</a>";
 			echo "</th>";
+			echo "<th>";
+			echo "OR";
+			echo "</th>";
+			echo "<th>";
+				echo '<a href="Fullfilment.php">';
+					echo "<h2>";
+						echo "VIEW ORDERS";
+					echo "</h2>";
+				echo "</a>";
+			echo "</th>";
 
 		echo "</tr>";
 	echo "</table>";
