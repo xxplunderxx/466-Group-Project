@@ -9,7 +9,7 @@
         }
          catch(PDOexception $e){
             echo "Connection to database failed: " . $e->getMessage();
-	 }
+	}
 	
 	empadditem_form();
 	if (isset($_POST['IID1']))
@@ -105,4 +105,3 @@
 ?>
     </body>
 </html>
-
