@@ -35,7 +35,7 @@
             $prepared = $pdo->prepare('UPDATE Fullfilment SET _STATUS = ? WHERE NUMBER = ?');
 
             // execute sql query
-            $prepared->execute(array($Stat,$Num));
+	    $prepared->execute(array($Stat,$Num));
 	    echo "<meta http-equiv='refresh' content='0'>";
         }
         else
@@ -43,8 +43,18 @@
             echo 'Erorr input P or S as status';
         }
     }
-
-?>
+    	$sql = "SELECT QTY FROM Fullfilment;";
+	$result = $pdo->query($sql);
+	//FETCH BOTH NEEDED TO GET USABLE INDEX
+	$rows = $result->fetchAll(PDO::FETCH_BOTH);
+	$TOTAL = 0.00;
+	for($i = 0;$i < sizeof($rows);$i++){
+		for($j = 0; $j <1; $j++){
+			$TOTAL+=$rows[$i][$j];
+		}
+	}
+	echo "Total of orders: $".$TOTAL;
+	?>
 
 </body>
 </html>
