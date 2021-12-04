@@ -69,6 +69,7 @@
 
         // execute sql query
         $prepared->execute(array($Note,$NUM));
+	echo "<meta http-equiv='refresh' content='0'>";
 
         echo "You left a note on order ". $NUM. " Your note was ".$Note;
     }
