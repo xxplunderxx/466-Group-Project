@@ -9,7 +9,7 @@
         }
          catch(PDOexception $e){
             echo "Connection to database failed: " . $e->getMessage();
-	 }
+	}
 	echo "<table cellpadding=30>";
 		echo "<tr>";
 			echo "<th>";
