@@ -35,16 +35,18 @@
             $prepared = $pdo->prepare('UPDATE Fullfilment SET _STATUS = ? WHERE NUMBER = ?');
 
             // execute sql query
-	    $prepared->execute(array($Stat,$Num));
-	    echo "<meta http-equiv='refresh' content='0'>";
+	        $prepared->execute(array($Stat,$Num));
+	        echo "<meta http-equiv='refresh' content='0'>";
         }
         else
         {
             echo 'Erorr input P or S as status';
         }
     }
-    	$sql = "SELECT QTY FROM Fullfilment;";
+
+    $sql = "SELECT QTY FROM Fullfilment;";
 	$result = $pdo->query($sql);
+
 	//FETCH BOTH NEEDED TO GET USABLE INDEX
 	$rows = $result->fetchAll(PDO::FETCH_BOTH);
 	$TOTAL = 0.00;
@@ -53,7 +55,22 @@
 			$TOTAL+=$rows[$i][$j];
 		}
 	}
-	echo "Total of orders: $".$TOTAL;
+    
+	echo "Total of order value: $".$TOTAL;
+
+    // add notes 
+    if(isset($_POST['Note']) AND isset($_POST['NUM']))
+    {
+        $NUM = $_POST['NUM'];
+        $Note = $_POST['Note'];
+        $prepared = $pdo->prepare('UPDATE Fullfilment SET NOTE = ? WHERE NUMBER = ?');
+
+        // execute sql query
+        $prepared->execute(array($Note,$NUM));
+
+        echo "You left a note on order ". $NUM. "Your note was ".$Note;
+    }
+
 	?>
 
 </body>
