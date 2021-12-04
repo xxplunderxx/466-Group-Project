@@ -55,8 +55,10 @@
 			$TOTAL+=$rows[$i][$j];
 		}
 	}
-    
+    	echo "<h2>";
 	echo "Total of order value: $".$TOTAL;
+	echo "</h2>";
+	echo "<br/>";
 
     // add notes 
     if(isset($_POST['Note']) AND isset($_POST['NUM']))
@@ -68,7 +70,7 @@
         // execute sql query
         $prepared->execute(array($Note,$NUM));
 
-        echo "You left a note on order ". $NUM. "Your note was ".$Note;
+        echo "You left a note on order ". $NUM. " Your note was ".$Note;
     }
 
 	?>
