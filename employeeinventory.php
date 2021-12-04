@@ -7,9 +7,9 @@
             $dsn = "mysql:host=courses;dbname=".$username;
             $pdo = new PDO($dsn, $username, $password);
         }
-         catch(PDOexception $e){
+        catch(PDOexception $e){
             echo "Connection to database failed: " . $e->getMessage();
-	 }
+	}
         print("LIST OF ALL ITEMS:\n");
         $result1 = $pdo->query("SELECT * FROM Items;");
         $rows = $result1->fetchAll(PDO::FETCH_ASSOC);
