@@ -36,6 +36,7 @@
 
             // execute sql query
             $prepared->execute(array($Stat,$Num));
+	    echo "<meta http-equiv='refresh' content='0'>";
         }
         else
         {
