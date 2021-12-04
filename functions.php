@@ -215,6 +215,17 @@ function F_form()
 
     echo '<br/><input type="submit" value="Submit"/>';
     echo "</form>";
+
+    // notes from
+    echo '<form action="" method="POST">';
+
+    echo "<h3>"."Add an order note"."</h3>";
+        echo '<input type="text" name="NUM"/> NUMBER '; 
+        echo '<input type="text" name="Note"/> MESSAGE ';    // item select
+
+    echo '<br/><input type="submit" value="Submit"/>';
+    echo "</form>";
+
 }
 
 ?>
