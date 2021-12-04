@@ -68,7 +68,25 @@
 	    }	   
 	    //reset shopping cart for next customer
             $result = $pdo->query("DELETE FROM Cart WHERE TOTAL >= 0.00");
-	 }
+	}
+	echo "<table cellpadding=30>";
+		echo "<tr>";
+			echo "<th>";
+				echo '<a href="home.html">';
+					echo "<h2>";
+						echo "Return to homepage";
+					echo "</h2>";
+				echo "</a>";
+			echo "</th>";
+			echo "<th>";
+				echo '<a href="UserOrderView.php">';
+					echo "<h2>";
+						echo "View order list and status";
+					echo "</h2>";
+				echo "</a>";
+			echo "</th>";
+		echo "</tr>";
+	echo "</table>";
 	?>
     </body>
 </html>
