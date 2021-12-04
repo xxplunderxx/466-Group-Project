@@ -1,6 +1,6 @@
 <html><head><title>Shopping Cart</title></head>
-    <body>
-<?php
+   <body>
+     <?php
 	include("secret.php");
 	include("functions.php");
         try{
@@ -68,6 +68,6 @@
 			echo "</th>";
 		echo "</tr>";
 	echo "</table>";
-?>
+	   ?>
     </body>
 </html>
