@@ -225,7 +225,5 @@ function F_form()
 
     echo '<br/><input type="submit" value="Submit"/>';
     echo "</form>";
-
 }
-
 ?>
