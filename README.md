@@ -8,4 +8,4 @@ This project is a webbased grocery store that uses PHP to make SQl queries into 
 
 -------- LINK HERE --------
 
-http://students.cs.niu.edu/~z1892587/Assignment9/466-Group-Project/home.html
+http://students.cs.niu.edu/~z1892587/466-Group-Project/home.html
