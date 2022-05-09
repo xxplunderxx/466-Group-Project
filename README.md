@@ -3,10 +3,10 @@ Group project workspace for NIU CSCI 466 Assignment.
 I completed this project on December 2nd 2021 as Sophmore 
 This project is a webbased grocery store that uses PHP to make SQl queries into a database hosted on department servers.
 
-#Group Members
+# Group Members
 I completed this project with one other group member
 
-#Background
+# Background
 This was my first web project ever. I have recently made a new and improved version for another project.
 see - 467-Product-System.
 
