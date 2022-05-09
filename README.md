@@ -8,8 +8,11 @@ I completed this project with one other group member
 
 # Background
 This was my first web project ever. I have recently made a new and improved version for another project.
-see - 467-Product-System.
 
--------- LINK HERE --------
+-------- NEWEST PORJECT --------
+http://students.cs.niu.edu/~z1892587/467-Product-System/home.html
+
+
+-------- VIEW PROJECT --------
 
 http://students.cs.niu.edu/~z1892587/466-Group-Project/home.html
